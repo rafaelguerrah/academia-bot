@@ -24,18 +24,16 @@ bot.command('menu', (ctx) => {
 });
 
 bot.hears(['oi', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'hello', 'hi'], (ctx) => {
-  if (ctx.chat.type === 'group' || ctx.chat.type === 'supergroup') {
-    ctx.reply('Bem-vindo à Academia! 💪 Escolha uma opção:', {
-      reply_markup: {
-        inline_keyboard: [
-          [{ text: "💳 Planos", callback_data: "planos" }],
-          [{ text: "📅 Horários", callback_data: "horarios" }],
-          [{ text: "ℹ️ Sobre", callback_data: "sobre" }],
-          [{ text: "📞 Contato", callback_data: "contato" }]
-        ]
-      }
-    });
-  }
+  ctx.reply('Bem-vindo à Academia! 💪 Escolha uma opção:', {
+    reply_markup: {
+      inline_keyboard: [
+        [{ text: "💳 Planos", callback_data: "planos" }],
+        [{ text: "📅 Horários", callback_data: "horarios" }],
+        [{ text: "ℹ️ Sobre", callback_data: "sobre" }],
+        [{ text: "📞 Contato", callback_data: "contato" }]
+      ]
+    }
+  });
 });
 
 bot.on('callback_query', async (ctx) => {
