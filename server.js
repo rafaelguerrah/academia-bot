@@ -2,6 +2,8 @@ const express = require('express');
 const bot = require('./bot'); // Importa o bot
 const app = express();
 
+app.use(express.json()); // Permite ler o corpo das requisições do Telegram (JSON)
+
 const planosRoutes = require('./routes/planos');
 const horariosRoutes = require('./routes/horarios');
 
