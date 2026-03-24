@@ -8,6 +8,11 @@ const horariosRoutes = require('./routes/horarios');
 app.use('/planos', planosRoutes);
 app.use('/horarios', horariosRoutes);
 
+// Rota raiz para exibir mensagem de sucesso no navegador
+app.get('/', (req, res) => {
+  res.send('🤖 Academia Bot API está online! Use o Telegram para interagir.');
+});
+
 // --- Configuração Webhook (Vercel) ---
 // Rota onde o Telegram enviará as atualizações
 app.use(bot.webhookCallback('/webhook'));
