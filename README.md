@@ -18,6 +18,12 @@ Um bot interativo para Telegram que oferece informações sobre planos, horário
 - npm
 - Token de um bot do Telegram (obtido via @BotFather)
 
+### Modo sem banco de dados (atual)
+Este projeto já está preparado para rodar sem qualquer banco de dados. Os dados de planos e horários são servidos diretamente em memória a partir dos controladores em `controller/planosController.js` e `controller/horariosController.js`.
+
+- Não é necessário configurar MongoDB, PostgreSQL ou outro banco.
+- Você pode testar imediatamente a API e o bot localmente.
+
 ### Passos
 
 1. **Clone ou baixe o projeto**
